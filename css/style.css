@@ -1,0 +1,606 @@
+@charset "UTF-8";
+/* цвет фона сайта */
+/* настройки кнопк */
+/*
+*  html5resetcss
+*/
+* {
+  text-decoration: none;
+  list-style: none;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+  margin: 0 auto;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  /* max-width: 1440px; */
+  min-height: 100vh;
+  font-family: "Glory";
+  background: #fff;
+}
+
+/* .container {
+    padding: 0 calc(50% - 470px);
+}
+
+.centerEl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.container {
+  padding: 0 calc(50% - 470px);
+}
+
+.centerEl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header {
+  width: 100%;
+}
+
+.header .header__navigation {
+  width: 100%;
+  margin-top: 31px;
+  border-bottom: 1px solid #828282;
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+          transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.header .header__menu {
+  margin-bottom: 31px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .header__list > a {
+  color: #828282;
+}
+
+.header .header__list > a:hover {
+  text-shadow: 0 0 2px #000;
+}
+
+.main {
+  min-width: 100%;
+}
+
+.main .aboutMe .aboutMe__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .aboutMe .aboutMe__name {
+  position: relative;
+  -webkit-animation: animAbout 1s forwards;
+          animation: animAbout 1s forwards;
+  width: 124px;
+  font-size: 2.6rem;
+  color: #070707;
+  margin-top: 40px;
+  opacity: 0;
+}
+
+.main .aboutMe .aboutMe__iFrom {
+  position: relative;
+  -webkit-animation: animAbout 1s 0.2s forwards;
+          animation: animAbout 1s 0.2s forwards;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: #070707;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  opacity: 0;
+}
+
+.main .aboutMe .aboutMy__langth {
+  position: relative;
+  -webkit-animation: animAbout 1s 0.5s forwards;
+          animation: animAbout 1s 0.5s forwards;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.1rem;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  opacity: 0;
+}
+
+.main .aboutMe .aboutMy__langth a {
+  color: #000;
+}
+
+.main .aboutMe .aboutMy__langth a:hover {
+  color: #970d0d;
+  text-shadow: 0 0 2px #000;
+}
+
+.main .aboutMe .aboutMe__pic {
+  margin-top: 49px;
+}
+
+.main .aboutMe .aboutMe__pic img {
+  position: relative;
+  width: 100%;
+}
+
+.main .aboutMe .aboutMe__pic #aboutMe__qubics {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background: #ffffff; */
+}
+
+.main .aboutMe .aboutMe__photo-mobile {
+  display: none;
+}
+
+.main .aboutMe .aboutMe__text {
+  margin-top: 104px;
+  padding: 120px 0 107px 0;
+  background: #f6f6f6;
+}
+
+.main .aboutMe .aboutMe__text h2,
+.main .aboutMe .aboutMe__text p {
+  max-width: 485px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main .aboutMe .aboutMe__text h2 {
+  font-size: 1.9rem;
+  line-height: 2.3rem;
+}
+
+.main .aboutMe .aboutMe__text p {
+  margin-top: 17px;
+}
+
+.main .skills {
+  background: #ffffff;
+}
+
+.main .skills .skills__title {
+  text-align: center;
+  margin-top: 90px;
+  font-size: 1.8rem;
+  line-height: 2.3erm;
+}
+
+.main .skills .scills__text {
+  margin: 69px;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  text-align: center;
+}
+
+.main .skills .skills__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 82px;
+}
+
+.main .skills .skills__cards img {
+  display: block;
+}
+
+.main .skills .skills__card {
+  width: 166px;
+}
+
+.main .skills .skills__image img {
+  margin: 0 auto;
+}
+
+.main .skills .skills__description {
+  width: 70px;
+  margin: 28px auto 0 auto;
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  text-align: center;
+}
+
+.main .skills .skills__stars {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 111px;
+}
+
+.main .portfolio {
+  width: 100%;
+  background: #f6f6f6;
+}
+
+.main .portfolio .portfolio__title {
+  font-size: 1.9rem;
+  line-height: 2.3rem;
+  padding-top: 112px;
+  padding-bottom: 97px;
+}
+
+.main .portfolio .portfolio__work {
+  margin: 0 auto;
+}
+
+.main .portfolio .portfolio__work img {
+  width: 100%;
+  display: block;
+}
+
+.main .portfolio .portfolio__work:not(:nth-child(1n)) {
+  margin-top: 99px;
+}
+
+.main .portfolio .portfolio__work:first-child {
+  margin-top: 74px;
+}
+
+.main .portfolio .portfolio__work-title {
+  margin-top: 45px;
+  font-size: 1rem;
+  line-height: 2.3;
+  color: #070707;
+}
+
+.main .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.main .contacts .contacts__title {
+  margin-top: 114px;
+  font-size: 1.6rem;
+  line-height: 2.3;
+  text-align: center;
+}
+
+.main .contacts .contacts__text {
+  max-width: 275px;
+  margin-top: 20px;
+  font-size: 1rem;
+  line-height: 1.1rem;
+  text-align: center;
+}
+
+.main .contacts .contacts__btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 8px 30px;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  color: #ffffff;
+  background: #070707;
+}
+
+.main .contacts .contacts__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 86px;
+}
+
+.main .contacts .contacts__social .contacts_social-icon:not(:last-child) {
+  margin-right: 61px;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 85px;
+  text-align: center;
+}
+
+.footer p {
+  max-width: 243px;
+  font-size: 0.7rem;
+  line-height: 0.8rem;
+  margin-bottom: 123px;
+}
+
+@-webkit-keyframes animAbout {
+  from {
+    top: -50px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animAbout {
+  from {
+    top: -50px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+/* @keyframes animFadein {
+    from {
+        opacity: 0;
+        border-radius: 50%;
+    }
+    to {
+        opacity: 1;
+        border-radius: 0%;
+    }
+} */
+@media (max-width: 780px) {
+  body {
+    padding: 0 30px;
+  }
+  .aboutMe__photo {
+    display: none;
+  }
+  .main .aboutMe .aboutMe__photo-mobile {
+    display: block;
+  }
+  .skills__cards {
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 376px) {
+  body {
+    padding: 0 30px;
+  }
+  .aboutMe__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .aboutMe__content img {
+    margin-top: 26px;
+  }
+  .aboutMe__content.container > div.aboutMe__iFrom {
+    margin-top: 23px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .aboutMy__langth {
+    display: none;
+  }
+}
